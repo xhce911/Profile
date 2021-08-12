@@ -1,0 +1,39 @@
+<div class="container is-widescreen my-6">
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+      <form >
+        <div class="field">
+        <label class="label">Titulo de la nota</label>
+        <div class="control">
+            <input required value="<%= page.title %>" class="input" type="text" placeholder="Text input" id="title" name="title">
+        </div>
+        </div>
+
+        
+        <div class="field">
+        <label class="label">Autor</label>
+        <div class="control">
+            <input required value="<%= page.author %>"  required class="input" type="text" placeholder="Text input" id="author" name="author">
+        </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea required class="textarea" placeholder="Textarea" name="content"id="content" ><%= page.content %></textarea >
+            </div>
+        </div>
+        <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" type="submit">Publicar</button>
+            </div>
+            <div class="control">
+              <a href="/"><button class="button is-link is-light" type="button">Cancel</button></a>
+            </div>
+          </div>  
+        
+    
+    </form>
+    </div>
+  </div>
+</div>
