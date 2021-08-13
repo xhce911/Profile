@@ -6,6 +6,10 @@
   "scripts": {
     "Start": "nodemon server"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
