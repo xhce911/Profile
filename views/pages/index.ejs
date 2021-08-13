@@ -3,254 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pirata Media</title>
+    <title>Portafolio Profesional</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section class="hero is-dark is-medium is-bold">
+    <section class="hero is-dark is-fullheight is-bold">
         <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                      
-                        <span class="navbar-burger burger" data-target="navbarMenu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </div>
-                    <div id="navbarMenu" class="navbar-menu">
-                        <div class="navbar-end">
-                            <div class="tabs is-right">
-                                <ul>
-                                    <li class="is-active"><a>Inicio</a></li>
-                                    <li><a href="">Portafolio</a></li>
-                                    <li><a href="">Entradas</a></li>
-                                    <li><a href="/pages/team">Equipo</a></li>
-                                    <li><a href="">FAQ U</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
         </div>
         <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">
-                Bienvenido a la nueva web de información
-                </h1>
-                <h2 class="subtitle">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </h2>
+            <div class="container has-text-left">
+                <h1 class="title">Heriberto Cavazos Estrada</h1>
+                <span class="subtitle"> Fullstack</span>
             </div>
         </div>
     </section>
-    <div class="box cta">
-        <p class="has-text-centered">
-            <span class="tag is-primary">Nuevo</span> Medio independiente con historias y contenido actualizado.
-        </p>
-    </div>
-    <section class="container">
-        <div class="columns features">
-                <% pages.forEach(page => { %>
-                    <div class="column  is-half">
-                        <div class="card my-4">
-                            <div class="card-content">
-                                <div class="media-content mx-4">
-                                    <h2 class="title is-4"><%= page.title %></h2> 
-                                    <%= page.logDate.toLocaleDateString() %>
-                                </div>
-                                <div class="cardContent my-4">
-                                    <img src="https://www.casacientifica.com/modules/icommerce/img/product/default.jpg" class="mx-4" alt="">
-                                    <%- page.sanitizedHtml    %>
-                                </div>
-                                <div class="is-align-content-flex-end mx-4">
-                                    <a href="pages/<%= page.slug%>" class="button is-primary ">Leer más</a>
-                                    <a href="/pages/edit/<%= page.id %>" class="button is-default">Editar</a>
-                                    <form  class="is-inline-block is-right " action="/pages/<%= page.id%>?_method=DELETE" method="POST">
-                                        <button class="button is-danger">Borrar</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div> 
+
+    <section class="hero is-fullheight py-6">
+        <div class="section-heading ">
+            <h3 class="title is-3">Un poco acerca de mi</h3>
+            <h4 class="subtitle is-5">“La tecnología es una herramienta diseñada a ayudarnos, no ha sustituirnos ” -H</h4>
+            <div class="container content has-text-left">
+                <p>En los últimos <strong>4 años</strong> me he desempeñado dentro del rol de front end developer de herramientas digitales para la educación,  las cuales van desde simples sitios o páginas web estáticas, hasta aplicaciones dedicadas para un hardware específico, mi trabajo consiste en entender los requerimientos técnicos previos al desarrollo, proponer un prototipo sobre la tecnología a desarrollar,</p>
+            </div>
+        <div class="columns has-same-height is-gapless py-6">
+            <div class="column">
+            <!-- Profile -->
+                <div class="card">
+                    <div class="card-content">
+                    <h3 class="title is-4">Perfil técnico</h3>
+
+                    <div class="content">
+                        <table class="table-profile">
+                        <tr>
+                            <th colspan="1"></th>
+                            <th colspan="2"></th>
+                        </tr>
+                        <tr>
+                            <td>Empleo Actual</td>
+                            <td>Fullstack Developer Tec de Monterrey</td>
+                        </tr>
+                        <tr>
+                            <td>Telegram chat</td>
+                            <td><a href="https://t.me/xhce911" class="button is-link"><i class="fab fa-telegram-plane mx-4"></i> Say hello!</a></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td>xhce911@gmail.com</td>
+                        </tr>
+                        </table>
                     </div>
-                <% }) %>  
-            
-        </div>
-
-
-
-
-
-        <div class="intro column is-12 is-offset-4 is-centered py-4">
-            <h2 class="title">El lugar perfecto para libres pensadores</h2><br>
-            <p class="subtitle">¡Siempre libres y piratas !</p>
-        </div>
-        <div class="sandbox">
-            <div class="tile is-ancestor">
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child notification is-white">
-                        <p class="title">¡Bienvenido!</p>
-                        <p class="subtitle">¿Te interesa anunciarte?</p>
-                    </article>
+                    <br>
+                    <div class="buttons has-addons is-centered">
+                        <a href="#" class="button is-link">Github</a>
+                        <a href="#" class="button is-link">LinkedIn</a>
+                        <a href="#" class="button is-link">Twitter</a>
+                    </div>
+                    </div>
                 </div>
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child notification is-white">
-                        <p class="title">Foo</p>
-                        <p class="subtitle">Bar</p>
-                    </article>
-                </div>
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child notification is-white">
-                        <p class="title">Redes sociales</p>
-                        <p class="subtitle">With some content</p>
+                <div class="card py-4">
+                    <div class="card-content">
+                        <h1 class="title py-6 ">Herramientas y editores</h1>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                            
+                            <img src="/img/ai.png" alt="" class="logo">
+                            <img src="/img/ae.png" alt="" class="logo">
+                            <img src="/img/au.png" alt="" class="logo">
+                            <img src="/img/ps.png" alt="" class="logo">
+                            <img src="/img/xd.png" alt="" class="logo">
+                            <img src="/img/sktch.png" alt="" class="logo">
+                            <img src="/img/fgm.png" alt="" class="logo">
+                            <img src="/img/unity.png" alt="" class="logo">
+                            <img src="/img/xcod.png" alt="" class="logo">
+
                         </div>
-                    </article>
+
+                    </div>
+
                 </div>
             </div>
-            <div class="tile is-ancestor">
-                <div class="tile is-vertical is-8">
-                    <div class="tile">
-                        <div class="tile is-parent is-vertical">
-                            <article class="tile is-child notification is-white">
-                                <p class="title">Vertical tiles</p>
-                                <p class="subtitle">Top box</p>
-                            </article>
-                            <article class="tile is-child notification is-white">
-                                <p class="title">Vertical tiles</p>
-                                <p class="subtitle">Bottom box</p>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification is-white">
-                                <p class="title">Historias del Fogón</p>
-                                <p class="subtitle">un vistazo a la cocina tradicional</p>
-                                <figure class="image cover">
-                                    <img src="https://historiasfogon.herokuapp.com/img/portada.png" alt="Description">
-                                </figure> 
-                            </article>
-                        </div>
-                    </div>
-                    <div class="tile is-parent is-shady">
-                        <article class="tile is-child notification is-white is is-center">
-                            <p class="title">Wide column</p>
-                            <p class="subtitle">Aligned with the right column</p>
+
+
+
+        <div class="column ">
+            <!-- Skills -->
+            <div class="card has-text-left ">
+                <div class="card-content skills-content">
+                    <h3 class="title is-4">Habilidades y tecnologías</h3>
+                    <div class="content">
+                        <article class="media">
+                        <div class="media-content">
                             <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+                            <p>
+                                <strong>JavaScript:</strong>
+                                <br>
+                                <progress class="progress is-primary" value="80" max="100"></progress>
+                            </p>
                             </div>
+                        </div>
+                        </article>
+
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                <p>
+                                    <strong>C#:</strong>
+                                    <br>
+                                    <progress class="progress is-warning" value="60" max="100"></progress>
+                                </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="media">
+                        <div class="media-content">
+                            <div class="content">
+                            <p>
+                                <strong>Express.js:</strong>
+                                <br>
+                                <progress class="progress is-primary" value="70" max="100"></progress>
+                            </p>
+                            </div>
+                        </div>
+                        </article>
+
+                        <article class="media">
+                        <div class="media-content">
+                            <div class="content">
+                            <p>
+                                <strong>Node.js:</strong>
+                                <br>
+                                <progress class="progress is-primary" value="75" max="100"></progress>
+                            </p>
+                            </div>
+                        </div>
+                        </article>
+
+                        <article class="media">
+                        <div class="media-content">
+                            <div class="content">
+                            <p>
+                                <strong>HTML5/CSS3</strong>
+                                <br>
+                                <progress class="progress is-primary" value="95" max="100"></progress>
+                            </p>
+                            </div>
+                        </div>
+                        </article>
+
+                        <article class="media">
+                        <div class="media-content">
+                            <div class="content">
+                            <p>
+                                <strong>Databases</strong>
+                                <br>
+                                <progress class="progress is-warning" value="66" max="100"></progress>
+                            </p>
+                            </div>
+                        </div>
                         </article>
                     </div>
                 </div>
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child notification is-white">
-                        <div class="content">
-                            <p class="title">Entrada principal</p>
-                            <p class="subtitle">With even more content</p>
-                            <div class="content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula
-                                eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-                                <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet
-                                felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
-                                <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam
-                                ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
             </div>
-            <div class="tile is-ancestor">
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child notification is-white">
-                        <p class="title">Side column</p>
-                        <p class="subtitle">With some content</p>
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                        </div>
-                    </article>
+
+
+            <div class="card py-4">
+                <div class="card-content">
+                    <h1 class="title py-6 ">Sistemas y otras tecnologías</h1>
+                    <div class="content">
+                        
+                        <img src="/img/appl.png" alt="" class="logo">
+                        <img src="/img/win.png" alt="" class="logo">
+                        <img src="/img/mnjro.png" alt="" class="logo">
+                        <img src="/img/ubnt.png" alt="" class="logo">
+                        <img src="/img/swift.png" alt="" class="logo">
+                        <img src="/img/gt.png" alt="" class="logo">
+                        <img src="/img/vs.png" alt="" class="logo">
+                        
+
+                    </div>
+
                 </div>
-                <div class="tile is-parent is-8 is-shady">
-                    <article class="tile is-child notification is-white">
-                        <p class="title">Main column</p>
-                        <p class="subtitle">With some content</p>
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                        </div>
-                    </article>
-                </div>
+
             </div>
-            <div class="tile is-ancestor">
-                <div class="tile is-parent is-8 is-shady">
-                    <article class="tile is-child notification is-white">
-                        <p class="title">Murphy's law</p>
-                        <p class="subtitle">Anything that can go wrong will go wrong</p>
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                        </div>
-                    </article>
-                </div>
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child notification is-white">
-                        <p class="title">Main column</p>
-                        <p class="subtitle">With some content</p>
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
+
         </div>
     </section>
-    <footer class="footer">
+    
+    <!--Workline-->
+    <section class="container has-text-centered">
+        
+    </section>
+   
+
+    <section class="section" id="portfolio">
         <div class="container">
+          <div class="section-heading">
+            <h3 class="title is-2">Portafolio</h3>
+            <h4 class="subtitle is-5">Mis trabajos más destacados</h4>
+          </div>
+          <br>
+    
+          <div class="container portfolio-container">
             <div class="columns">
-                <div class="column is-3 is-offset-2">
-                    <h2><strong>Colectivos</strong></h2>
-                    <ul>
-                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                        <li><a href="#">Vestibulum errato isse</a></li>
-                        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                        <li><a href="#">Aisia caisia</a></li>
-                        <li><a href="#">Murphy's law</a></li>
-                        <li><a href="#">Flimsy Lavenrock</a></li>
-                        <li><a href="#">Maven Mousie Lavender</a></li>
-                    </ul>
+              <div class="column is-4">
+                <!-- ART3D -->
+                <div class="card">
+                  <header class="card-header">
+                    <p class="card-header-title">
+                      <span>ART3D</span>
+                      <span class="is-pulled-right">
+                          <span class="tag is-default">v1</span>
+                          <span class="tag is-default">C#</span>
+                        <span class="tag is-default">Android</span>
+                        <span class="tag is-default">IOS</span>
+                      </span>
+                    </p>
+                  </header>
+                  <div class="card-content">
+                    <figure class="image">
+                      <img src="../img/artcv.png" alt="image refrence">
+                    </figure>
+                  </div>
+                  <footer class="card-footer">
+                    <a href="https://thce911.github.io/ART3D/" class="card-footer-item" target="_blank">Página de producto</a>
+                    <a href="https://bitbucket.org/dctbucket/art3d/src" class="card-footer-item" target="_blank">Código fuente</a>
+                  </footer>
                 </div>
-                <div class="column is-3">
-                    <h2><strong>Proyectos</strong></h2>
-                    <ul>
-                        <li><a href="#">Labore et dolore magna aliqua</a></li>
-                        <li><a href="#">Kanban airis sum eschelor</a></li>
-                        <li><a href="#">Modular modern free</a></li>
-                        <li><a href="#">The king of clubs</a></li>
-                        <li><a href="#">The Discovery Dissipation</a></li>
-                        <li><a href="#">Course Correction</a></li>
-                        <li><a href="#">Better Angels</a></li>
-                    </ul>
+        </div>
+        <div class="column is-4">
+            <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    <span>Profesor Atom</span>
+                    <span class="is-pulled-right">
+                        <span class="tag is-default">v1</span>
+                        <span class="tag is-default">Js & Gcloud</span>
+                      <span class="tag is-default">Android</span>
+                      <span class="tag is-default">IOS</span>
+                    </span>
+                  </p>
+                </header>
+                <div class="card-content">
+                  <figure class="image">
+                    <img src="../img/prcv.png" alt="image refrence">
+                  </figure>
                 </div>
-                <div class="column is-4">
-                    <h2><strong>Soporte y desarrollo</strong></h2>
-                    <ul>
-                        <li><a href="#">Objects in space</a></li>
-                        <li><a href="#">Playing cards with coyote</a></li>
-                        <li><a href="#">Goodbye Yellow Brick Road</a></li>
-                        <li><a href="#">The Garden of Forking Paths</a></li>
-                        <li><a href="#">Future Shock</a></li>
-                    </ul>
+                <footer class="card-footer">
+                  <a href="https://profesoratom-e2b4d.firebaseapp.com/" target="_blank" class="card-footer-item">Página de producto</a>
+                  <a href="https://bitbucket.org/dctbucket/profesor-atom/src/master/"  target="_blank" class="card-footer-item">Código fuente</a>
+                </footer>
+              </div>
+        </div>
+        <div class="column is-4">
+            <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    <span>Biomedia</span>
+                    <span class="is-pulled-right">
+                        <span class="tag is-default">v1</span>
+                        <span class="tag is-default">Swift</span>
+                      <span class="tag is-default">Ipad Os</span>
+                    </span>
+                  </p>
+                </header>
+                <div class="card-content">
+                  <figure class="image">
+                    <img src="../img/biomedia.png" alt="image refrence">
+                  </figure>
                 </div>
-            </div>
-            <div class="content has-text-centered">
-                <p>
-                    <a class="icon" href="https://github.com/BulmaTemplates/bulma-templates">
-                        <i class="fa fa-github"></i>
-                    </a>
-                </p>
-              
-    </footer>
+                <footer class="card-footer">
+                  <a href="https://apps.apple.com/us/app/biomedia/id1489904891" class="card-footer-item" target="_blank">Página de producto</a>
+                  <a href="https://bitbucket.org/dctbucket/biomedia/src/master/c" class="card-footer-item" target="_blank">Código fuente</a>
+                </footer>
+              </div>
+        </div>
+      </section>
+      <section class="hero is-medium is-bold has-text-centered">
+          <div class="hero-body">
+            <h1 class="title">Lleváte una copia</h1>
+            <a href="/files/CV.pdf" class="button is-link " download><i class="far fa-file-alt mx-4" ></i> Descargar</a>
+
+          </div>
+
+      </section>
 
 
 </body>
+<script src="https://kit.fontawesome.com/1e1a8bc4b5.js" crossorigin="anonymous"></script>
+
 </html>
