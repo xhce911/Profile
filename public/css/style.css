@@ -53,6 +53,10 @@
     background-repeat: no-repeat;
   }
 
+  .white{
+    color: lightcyan;
+  }
+
   .profile{
     width: 250px;
     height: auto;
