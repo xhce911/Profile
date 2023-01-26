@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://xhce911.github.io/Profile/",
   "scripts": {
-    "Start": "nodemon server"
+    "Start": "nodemon server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "example",
@@ -24,6 +27,7 @@
     "slugify": "^1.6.0"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "nodemon": "^2.0.12"
   }
 }
