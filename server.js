@@ -1,5 +1,6 @@
-const express = require ('express')
-const app = express()
+const express = require ('express');
+const app = express();
+const serverless = require('serverless-http');
 const port = 5001;
 
 
@@ -22,3 +23,4 @@ app.listen(process.env.PORT || port,
     () => console.info(`Listening on port ${port}`));
 
 
+module.exports.handler = serverless(app);
