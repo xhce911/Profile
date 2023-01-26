@@ -11,12 +11,12 @@ app.use('/js', express.static(__dirname + 'public/js'));
 app.use('/img', express.static(__dirname + 'public/img'));
 app.use('/files', express.static(__dirname + 'public/files'));
 
-app.use(express.static('root'));
-app.use("/root", express.static(__dirname + "root/"));
+app.use(express.static('dist'));
+app.use("/dist", express.static(__dirname + "dist/"));
 
 
 app.get("/", (req, res) =>{
-    res.sendFile(__dirname + "/root/index.html");
+    res.sendFile(__dirname + "/dist/index.html");
 });
 
 app.listen(process.env.PORT || port,
