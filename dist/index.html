@@ -32,11 +32,13 @@
         <h1 class="text-4xl font-bold">pero me dicen H</h1>
         <p class="py-6">Un versátil desarrollador de soluciones digitales,<br> ¿Tienes tú idea pero no sabes por donde comenzar?</p>
         <a href="https://linkedin.com/in/xhce911" target="_blank"><button class="btn btn-primary">Pregunta sin costo</button></a>
+        <a href="javascript: go()"><button class="btn btn-outline-primary">Sigue leyendo</button></a>
+        
       </div>
     </div>
   </div>
 
-  <div class="hero min-h-screen ng base-300">
+  <div class="hero min-h-screen ng base-300" id="Resume">
     <div class="hero-content w-full">
       <div class="flex xl:flex-row sm:flex-col">
         <div class="w-1/2 mx-2">
@@ -369,11 +371,16 @@
 <script>
   // element which needs to be scrolled to
   var element = document.querySelector("#info");
+  var object = document.querySelector("#Resume");
 
   // scroll to element
  function next(){
   element.scrollIntoView({ behavior: 'smooth', block: 'end'});
  }
+ function go(){
+  object.scrollIntoView({ behavior: 'smooth', block: 'end'});
+ }
+ 
 </script>
 
 </html>
