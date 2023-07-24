@@ -11,12 +11,9 @@ app.use('/js', express.static(__dirname + 'public/js'));
 app.use('/img', express.static(__dirname + 'public/img'));
 app.use('/files', express.static(__dirname + 'public/files'));
 
-app.use(express.static('dist'));
-app.use("/dist", express.static(__dirname + "dist/"));
-
 
 app.get("/", (req, res) =>{
-    res.sendFile(__dirname + "/dist/index.html");
+    res.sendFile(__dirname + "/index.html");
 });
 
 app.listen(process.env.PORT || port,
