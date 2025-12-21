@@ -6,10 +6,11 @@ const port = 5001;
 
 app.use(express.static('public'));
 
-app.use('/css', express.static(__dirname + 'public/css'));
-app.use('/js', express.static(__dirname + 'public/js'));
-app.use('/img', express.static(__dirname + 'public/img'));
-app.use('/files', express.static(__dirname + 'public/files'));
+app.use('/css', express.static(__dirname + '/public/css'));
+app.use('/js', express.static(__dirname + '/public/js'));
+app.use('/img', express.static(__dirname + '/public/img'));
+app.use('/files', express.static(__dirname + '/public/files'));
+app.use('/components', express.static(__dirname + '/public/components'));
 
 
 app.get("/", (req, res) =>{

@@ -1,6 +1,41 @@
 @media (min-width:500px) {
-body{
-    overflow-x: none;
-}
-  
+  body {
+    overflow-x: hidden;
   }
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .card {
+    margin: 0.5rem 0;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-4xl {
+    font-size: 2rem;
+  }
+}
+
+/* Fix for image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 768px) {
+  .gap-6 {
+    gap: 1rem;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+}
