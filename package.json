@@ -6,7 +6,7 @@
   "scripts": {
     "start": "netlify dev",
     "build": "webpack --config ./webpack.config.js",
-    "postinstall": "npm --prefix ./functions/my-function i && npm --prefix ./functions/other-function i"
+    "postinstall": "node ./scripts/postinstall.js"
   },
   "keywords": [
     "example",
