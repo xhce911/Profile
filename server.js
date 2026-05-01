@@ -1,24 +1,17 @@
-const express = require ('express');
+const path = require("node:path");
+const express = require("express");
+const serverless = require("serverless-http");
+
 const app = express();
-const serverless = require('serverless-http');
 const port = 5001;
 
+const publicDir = path.join(__dirname, "public");
+app.use(express.static(publicDir));
 
-app.use(express.static('public'));
-
-app.use('/css', express.static(__dirname + '/public/css'));
-app.use('/js', express.static(__dirname + '/public/js'));
-app.use('/img', express.static(__dirname + '/public/img'));
-app.use('/files', express.static(__dirname + '/public/files'));
-app.use('/components', express.static(__dirname + '/public/components'));
-
-
-app.get("/", (req, res) =>{
-    res.sendFile(__dirname + "/index.html");
+app.get("/", (req, res) => {
+  res.sendFile(path.join(publicDir, "index.html"));
 });
 
-app.listen(process.env.PORT || port,
-    () => console.info(`Listening on port ${port}`));
-
+app.listen(process.env.PORT || port, () => console.info(`Listening on port ${port}`));
 
 module.exports.handler = serverless(app);
