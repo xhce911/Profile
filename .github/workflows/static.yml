@@ -35,13 +35,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Prepare static files
         run: |
-          # Create output directory
           mkdir -p _site
-          # Copy index.html to root
-          cp index.html _site/
-          # Copy public folder contents to root
-          cp -r public/* _site/
-          # Create .nojekyll file to disable Jekyll processing
+          cp -r public/. _site/
           touch _site/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

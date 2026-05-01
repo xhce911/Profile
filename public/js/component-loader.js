@@ -1,7 +1,8 @@
 // Component Loader
 async function loadComponent(componentName, targetElementId) {
   try {
-    const response = await fetch(`/components/${componentName}.html`);
+    const url = new URL(`components/${componentName}.html`, window.location.href);
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Failed to load component: ${componentName}`);
     }
